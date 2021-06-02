@@ -59,7 +59,7 @@ This folder will include all of the figures used in the qc checks,  including hi
 
 Michael and Steph will use Github issues to assign datasets to team members. The datasets will be located in the Data/inputs folder. To ensure a fresh set of eyes looks at each datasets, no one will work on their own dataset. Data scripts for data cleanings and qc checks will be kept in the scripts folder and output will be kept in the Data/derived (.csv) and Figures (qc checks) folders. 
 
-We propose using the Github Issues tab for project management, troubleshooting and team communications. Using Issues will also keep a record of how we decided to clean the data in a place that everyone can see and comment on. This will also be helpful in the future if(/when) we need to make changes.
+We propose using the Github Issues tab for project management, troubleshooting, team communications, and tracking progress. Using Issues will also keep a record of how we decided to clean the data in a place that everyone can see and comment on. This will also be helpful in the future if(/when) we need to make changes.
 
 Note: If you clone this repo to your computer you will have access to all of the files in the repo. **Do not** edit any files besides your own script and please **do not** change the folder structure of this repo.
 
