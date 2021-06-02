@@ -6,7 +6,7 @@ Welcome to the ZIG GLEON Data Harmonization Team git repo! The goal of the data 
 * Provide scripted workflows for each step of data cleaning
 * Perform high level QC of submitted data
 
-This readme will walk through the data sharing policy, structure of this git repo, proposed workflow and structure of the repo, suggested packages, and more. Please see the `readme` in the Scripts folder for tips on cleaning a dataset, performing QC, and example script.
+This readme will walk through the data sharing policy, structure of this git repo, proposed workflow and structure of the repo, suggested packages, and more. Please see the `readme` in the Scripts folder for tips on cleaning a dataset, performing QC checks, and an example script.
 
 Please use github issues or feel free to reach out to Michael Meyer (michael.f.meyer@wsu.edu), Steph Figary (sef92@cornell.edu) or Warren Currie (warren.currie@dfo-mpo.gc.ca) if you have any questions on this work.  
 
@@ -48,7 +48,7 @@ This folder includes all of the scripts that will be used to clean data individu
 
 ### Folder: Figures
 
-This folder will include all of the qa/qc figures, including histograms, scatterplots, and others. See the `readme` in this Scripts folder for suggested qa/qc methods and naming conventions (also in the Figures `readme`).
+This folder will include all of the figures used in the qc checks,  including histograms, scatterplots, and others. See the `readme` in this Scripts folder for suggested qa/qc methods and naming conventions (also in the Figures `readme`).
 
 *MM/SF discussion point: Should everyone have a separate folder here as well?*
 
@@ -57,16 +57,18 @@ This folder will include all of the qa/qc figures, including histograms, scatter
 
 ## Proposed workflow 
 
-Michael and Steph will you Github issues to assign datasets to team members. The datasets will be located in the Data/inputs folder. To ensure a fresh set of eyes looks at each datasets, no one will work on their own dataset. Data scripts for data cleanings and qc checks will be kept in the scripts folder and output will be kept in the Data/derived (.csv) and Figures (qc checks) folders. 
+Michael and Steph will use Github issues to assign datasets to team members. The datasets will be located in the Data/inputs folder. To ensure a fresh set of eyes looks at each datasets, no one will work on their own dataset. Data scripts for data cleanings and qc checks will be kept in the scripts folder and output will be kept in the Data/derived (.csv) and Figures (qc checks) folders. 
 
 We propose using the Github Issues tab for project management, troubleshooting and team communications. Using Issues will also keep a record of how we decided to clean the data in a place that everyone can see and comment on. This will also be helpful in the future if(/when) we need to make changes.
+
+Note: If you clone this repo to your computer you will have access to all of the files in the repo. **Do not** edit any files besides your own script and please **do not** change the folder structure of this repo.
 
 <br>
 
 ## Suggested packages and versions
-tidyverse $\geq$ 1.3.0
+tidyverse >= 1.3.0
 
-readxl $\geq$ 1.3.0
+readxl >= 1.3.0
 
 *MM/SF discussion point: Others? Could list all components of the tidyverse, but this seemed cleaner to me*
 
@@ -74,16 +76,18 @@ readxl $\geq$ 1.3.0
 
 ## Examples and additional information
 
-Additional information can be found in the `readme` of each of the folders. Specifically, the `readme` of the scripts folder is a good place to start as in provides more information on the work flow for each dataset. The script `.R` provides an example workflow, with comments, for cleaning and quality checks for an example dataset. 
+Additional information can be found in the `readme` of each of the folders. The `readme` of the scripts folder is a good place to start as in provides more information on the work flow for each dataset. The script `TO FILL IN.R` provides an example workflow, with comments, for cleaning and quality checks for an example dataset. 
+
+*MM/SF discussion: `x` provides an example of metadata as well?*
 <br>
 
 
-## Github resources
+### Github resources
 
 We are using Github for this work because of its version control capabilities and the ability to communicate through issues. We know many members are new to Github and wanted to provide some resources for getting started. 
 
-* [Git in R](https://nt246.github.io/NTRES-6100-data-science/lesson2-rmarkdown-github.html): Lecture notes from Dr. Nina Overgaard Therkildsen's Collaborative and Reproducible Data Science in R course at Cornell University. Lessons 2-5 provide step-by-step instructions on how to get started using github with Rstudio. These links were shared with permission from Dr. Nina Overgaard Therkildsen.
-* [GLEON Github workshop](https://www.youtube.com/watch?v=B-FHx4l1BNU)
+* [Git in R:](https://nt246.github.io/NTRES-6100-data-science/lesson2-rmarkdown-github.html) Lecture notes from Dr. Nina Overgaard Therkildsen's Collaborative and Reproducible Data Science in R course at Cornell University. Lessons 2-5 provide step-by-step instructions on how to get started using github with Rstudio. These links are shared with permission from Dr. Nina Overgaard Therkildsen.
+* [GLEON GitHub workshop](https://www.youtube.com/watch?v=B-FHx4l1BNU)
 * [Jenny Bryan’s Happy Git with R:](https://happygitwithr.com/big-picture.html) Chapter 1 is a great introduction to Git and the benefits of using it.
 * [GitHub for Project Management by Openscapes:](https://openscapes.github.io/series/github-issues.html) Chapter 10 includes an overview of Git Issues.
 
