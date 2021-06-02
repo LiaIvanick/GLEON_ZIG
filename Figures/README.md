@@ -1,3 +1,5 @@
 # Figures
 
-TO BE FILLED IN
+
+Naming conventions?
+subfolders/person/lake? One figure/lake?
