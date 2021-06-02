@@ -20,6 +20,9 @@ Open the dataset in excel:
 * Search for anything that could cause import issues
 * Use readxl to import the data
 
+<br>
+
+
 **Worksheet: lake**
 * Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables are in the expected units. Check every mismatch and correct where needed. 
 * Lake location:
@@ -27,6 +30,9 @@ Open the dataset in excel:
   + Confirm the corrdinates match to a water body using statlite imagry
   + Confirm R understands the corredinates using the "maps" package *include or no?*
 * Look at data provider notes
+
+<br>
+
 
 **Worksheet: stationid**
 * Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables are in the expected units. Check every mismatch and correct where needed. 
@@ -37,6 +43,9 @@ Open the dataset in excel:
   + Confirm R understands the corredinates using the "maps" package *include or no?*
 * read the `sid_comments`
 
+<br>
+
+
 **Worksheet: water_parameters**
 * Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables are in the expected units. Check every mismatch and correct where needed. 
 * check that the waterbody_name matches the waterbody_name in the `lake` worksheet
@@ -44,6 +53,9 @@ Open the dataset in excel:
 * surf_or_int
 
 **Worksheet: taxa_list**
+
+<br>
+
 
 **Worksheet: zooplankton**
 * Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables are in the expected units. Check every mismatch and correct where needed. 
@@ -54,15 +66,25 @@ Open the dataset in excel:
   + Density **FILL IN**
   + Biomass **FILL IN**
 
+<br>
+
+
 **Worksheet: zoop_length**
 * Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables are in the expected units. Check every mismatch and correct where needed. 
 * check that the waterbody_name matches the waterbody_name in the `lake` worksheet
 * check that the stationids match the stationids in the `stationid` worksheet
 
+<br>
+
+
 **Worksheet: lake_timeline**
 * check that the waterbody_name matches the waterbody_name in the `lake` worksheet
 
+<br>
+
 **Worksheet: equiptment**
+
+<br>
 
 **Worksheet: additional data**
 
