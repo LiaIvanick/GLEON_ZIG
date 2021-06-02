@@ -20,7 +20,7 @@ Open the dataset in excel:
 * Search for anything that could cause import issues
 * Use readxl to import the data
 
-Worksheet: lake
+**Worksheet: lake**
 * Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables are in the expected units. Check every mismatch and correct where needed. 
 * Lake location:
   + Convert the latitude and longitude to decimal degrees, if needed
@@ -28,7 +28,7 @@ Worksheet: lake
   + Confirm R understands the corredinates using the "maps" package *include or no?*
 * Look at data provider notes
 
-Worksheet: stationid
+**Worksheet: stationid**
 * Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables are in the expected units. Check every mismatch and correct where needed. 
 * check that the waterbody_name matches the waterbody_name in the `lake` worksheet
 * Site locations:
@@ -37,15 +37,15 @@ Worksheet: stationid
   + Confirm R understands the corredinates using the "maps" package *include or no?*
 * read the `sid_comments`
 
-Worksheet: water_parameters
+**Worksheet: water_parameters**
 * Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables are in the expected units. Check every mismatch and correct where needed. 
 * check that the waterbody_name matches the waterbody_name in the `lake` worksheet
 * check that the stationids match the stationids in the `stationid` worksheet
 * surf_or_int
 
-Worksheet: taxa_list
+**Worksheet: taxa_list**
 
-Worksheet: zooplankton
+**Worksheet: zooplankton**
 * Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables are in the expected units. Check every mismatch and correct where needed. 
 * check that the waterbody_name matches the waterbody_name in the `lake` worksheet
 * check that the stationids match the stationids in the `stationid` worksheet
@@ -54,17 +54,17 @@ Worksheet: zooplankton
   + Density **FILL IN**
   + Biomass **FILL IN**
 
-Worksheet: zoop_length
+**Worksheet: zoop_length**
 * Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables are in the expected units. Check every mismatch and correct where needed. 
 * check that the waterbody_name matches the waterbody_name in the `lake` worksheet
 * check that the stationids match the stationids in the `stationid` worksheet
 
-Worksheet: lake_timeline
+**Worksheet: lake_timeline**
 * check that the waterbody_name matches the waterbody_name in the `lake` worksheet
 
-Worksheet: equiptment
+**Worksheet: equiptment**
 
-Worksheet: additional data
+**Worksheet: additional data**
 
 <br>
 
