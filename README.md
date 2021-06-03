@@ -78,6 +78,7 @@ The [README](scripts/README.md) in the scripts folder includes a checklist for d
 * `tidyverse` >= 1.3.0
 * `readxl` >= 1.3.0
 * Please set your RStudio -> Preferences -> General to never restore or save the workspace (.RData)
+
 ![](RData.png){width=30%}
 
 <br>
