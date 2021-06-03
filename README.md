@@ -96,4 +96,4 @@ We are using Github for version control and communication/troubleshooting throug
 
 ## Thank you!
 
-Lastly, thank you all for volunteering your time and effort to moving ZIG forward by joining this team! 
+Thank you all for volunteering your time and effort to moving ZIG forward by joining this team!
