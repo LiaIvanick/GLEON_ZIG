@@ -47,13 +47,13 @@ The data folder has several subfolders:
 
 <br>
 
-### Folder: [Scripts](https://github.com/sfigary/GLEON_ZIG/tree/main/Scripts)
+### Folder: [Scripts](https://github.com/sfigary/GLEON_ZIG/tree/main/scripts)
 
 This folder includes all of the scripts that are used to clean each dataset and create one final dataset for analysis (later step). The [README](scripts/README.md) in this folder describes the steps for data cleaning, qc checks, and file naming conventions. **Please only edit your own script in this folder to prevent merge conflicts.**
 
 <br>
 
-### Folder: [Figures](https://github.com/sfigary/GLEON_ZIG/tree/main/Figures)
+### Folder: [Figures](https://github.com/sfigary/GLEON_ZIG/tree/main/figures)
 
 This folder will include all of the figures used in the qc checks, including histograms, scatterplots, and others. Data cleaning scripts should write figures to this folder. See the [README](scripts/README.md) in this scripts folder for suggested qa/qc methods and in the [README](figures/README.md) in the figures folder.
 
