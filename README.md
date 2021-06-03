@@ -17,7 +17,7 @@ Please use Github [Issues](https://github.com/sfigary/GLEON_ZIG/issues) or feel 
 * [Repo structure](#repo-structure)
 * [Proposed workflow](#proposed-workflow)
 * [Suggested packages and versions](#suggested-packages-and-versions)
-* [Examples and additional information](#examples-and-additional-information)
+* [Example workflow](#example-workflow)
 * [Github resources](#github-resources)
 * [Thank you!](#thank-you)
 
@@ -61,7 +61,7 @@ This folder will include all of the figures used in the qc checks, including his
 
 ## Proposed workflow 
 
-Michael and Steph will use Github [Issues](https://github.com/sfigary/GLEON_ZIG/issues) to assign datasets to team members. The datasets will be located in the ["data/inputs"](https://github.com/sfigary/GLEON_ZIG/tree/main/data/inputs). To ensure each dataset is looked over with a new pair of eyes, no one will work on their own dataset. Scripts for data cleaning and qc checks will be kept in the scripts folder and will write output to the ["data/derived"](https://github.com/sfigary/GLEON_ZIG/tree/main/data/derived) (.csv) and ["figures"](https://github.com/sfigary/GLEON_ZIG/tree/main/data/derived) (qc checks) folders. 
+Michael and Steph will use Github [Issues](https://github.com/sfigary/GLEON_ZIG/issues) to assign datasets to team members. The datasets will be located in the [data/inputs](https://github.com/sfigary/GLEON_ZIG/tree/main/data/inputs). To ensure each dataset is looked over with a new pair of eyes, no one will work on their own dataset. Scripts for data cleaning and qc checks will be kept in the scripts folder and will write output to the [data/derived](https://github.com/sfigary/GLEON_ZIG/tree/main/data/derived) (.csv) and [figures](https://github.com/sfigary/GLEON_ZIG/tree/main/figures) (qc checks) folders. 
 
 We will use Github [Issues](https://github.com/sfigary/GLEON_ZIG/issues) for project management, troubleshooting, team communications, and tracking progress. There are many benefits to using Issues, including maintaining a record of data cleaning decisions in a location that everyone in the Data Team can see and comment on. If you are interested in learning more about Github [Issues](https://github.com/sfigary/GLEON_ZIG/issues), please see Chapter 10 in [GitHub for Project Management by Openscapes.](https://openscapes.github.io/series/github-issues.html)
 
@@ -85,7 +85,7 @@ The [README](scripts/README.md) in the scripts folder includes a checklist for d
 
 We are using Github for version control and communication/troubleshooting through Issues. If you're new to Github, here are some resources to get you started:
 
-* [Git in R:](https://nt246.github.io/NTRES-6100-data-science/lesson2-rmarkdown-github.html) Lecture notes from Dr. Nina Overgaard Therkildsen's Collaborative and Reproducible Data Science in R course at Cornell University. Lessons 2-5 provide step-by-step instructions for setting up and pairing Github with Rstudio. These links are shared with permission from Dr. Nina Overgaard Therkildsen. (Note: This is how Steph learned Github and she highly suggests this as a resource!)
+* [Git in R:](https://nt246.github.io/NTRES-6100-data-science/lesson2-rmarkdown-github.html) Lecture notes from Dr. Nina Overgaard Therkildsen's Collaborative and Reproducible Data Science in R course at Cornell University. Lessons 2-5 provide step-by-step instructions for setting up and pairing Github with Rstudio. These links are shared with permission from Dr. Nina Overgaard Therkildsen.
 * [GLEON GitHub workshop](https://www.youtube.com/watch?v=B-FHx4l1BNU)
 * [Jenny Bryan’s Happy Git with R:](https://happygitwithr.com/big-picture.html) Chapter 1 is a great introduction to Git and its benefits.
 * [GitHub for Project Management by Openscapes:](https://openscapes.github.io/series/github-issues.html) Chapter 10 includes an overview of Git Issues.
