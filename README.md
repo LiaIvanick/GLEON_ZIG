@@ -43,7 +43,7 @@ The data folder has several subfolders:
 
 * Inputs: **Do not edit!** This folder includes the original data files from the data providers. Michael or Steph will assign datasets to each member of the Date Team that can be found in this folder.
   
-* Derived: Each member of the team will have a subfolder in this folder that their R scripts should write cleaned .csv's to. Please see the data folder's [README](data/README.md) for file naming conventions.
+* Derived: Each member of the team will have a subfolder in this folder that their R scripts should write cleaned .csv's to. Please see the scripts folder's [README](scripts/README.md) for file naming conventions.
 
 <br>
 
