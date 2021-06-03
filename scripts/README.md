@@ -56,20 +56,20 @@ Open the dataset in excel:
 
 **Worksheet: stationid**
 * Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables (11) are in the expected units and that all read in. Check every mismatch and correct where needed. 
-* Check that the waterbody_name matches the waterbody_name in the `lake` worksheet
+* Check that the waterbody_name matches the waterbody_name in the lake worksheet
 * Site locations:
   + Convert the latitude and longitude to decimal degrees, if needed
   + Confirm the coordinates match to a water body using satellite imagery
   + Confirm R understands the coordinates using the "maps" package *include or no?*
-* Read the `sid_comments` and...
+* Read the sid_comments and...
 
 <br>
 
 
 **Worksheet: water_parameters**
 * Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables (29) are in the expected units and that all read in. Check every mismatch and correct where needed. 
-* Check that the waterbody_name matches the waterbody_name in the `lake` worksheet
-* Check that the stationids match the stationids in the `stationid` worksheet
+* Check that the waterbody_name matches the waterbody_name in the lake worksheet
+* Check that the stationids match the stationids in the stationid worksheet
 * *surf_or_int- need to do something with this*
 
 <br>
@@ -82,9 +82,9 @@ Open the dataset in excel:
 
 **Worksheet: zooplankton**
 * Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables (19) are in the expected units and that all read in. Check every mismatch and correct where needed. 
-* Check that the waterbody_name matches the waterbody_name in the `lake` worksheet
-* Check that the stationids match the stationids in the `stationid` worksheet
-* Check that the taxa_name matches the taxa_name in the `taxa_list` worksheet
+* Check that the waterbody_name matches the waterbody_name in the lake worksheet
+* Check that the stationids match the stationids in the stationid worksheet
+* Check that the taxa_name matches the taxa_name in the taxa_list worksheet
 * All data needs to be converted to uniform units
   + Density **FILL IN**
   + Biomass **FILL IN**
@@ -94,15 +94,15 @@ Open the dataset in excel:
 
 **Worksheet: zoop_length**
 * Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables (12) are in the expected units and that all read in. Check every mismatch and correct where needed. 
-* Check that the waterbody_name matches the waterbody_name in the `lake` worksheet
-* Check that the stationids match the stationids in the `stationid` worksheet
+* Check that the waterbody_name matches the waterbody_name in the lake worksheet
+* Check that the stationids match the stationids in the stationid worksheet
 
 <br>
 
 
 **Worksheet: lake_timeline**
 * Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables (3) are in the expected units and that all read in. Check every mismatch and correct where needed.
-* Check that the waterbody_name matches the waterbody_name in the `lake` worksheet
+* Check that the waterbody_name matches the waterbody_name in the lake worksheet
 
 <br>
 
@@ -136,4 +136,4 @@ ADD
 <br>
 
 ## Example script
-See `00_MeyerFigary_examplelake_cleaning.R` for an example script of data cleaning and QC checks.
+See 00_MeyerFigary_examplelake_cleaning.R for an example script of data cleaning and QC checks.
