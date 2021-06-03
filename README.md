@@ -16,7 +16,7 @@ Please use Github [Issues](https://github.com/sfigary/GLEON_ZIG/issues) or feel 
 * [Data policy](#data-policy)
 * [Repo structure](#repo-structure)
 * [Proposed workflow](#proposed-workflow)
-* [Suggested packages and versions](#suggested-packages-and-versions)
+* [Suggested packages, versions, and R practices](#suggested-packages,-versions,-and-R-practices)
 * [Example workflow](#example-workflow)
 * [Github resources](#github-resources)
 * [Thank you!](#thank-you)
@@ -73,11 +73,12 @@ The [README](scripts/README.md) in the scripts folder includes a checklist for d
 
 <br>
 
-## Suggested packages and versions
+## Suggested packages, versions, and R practices
 
-`tidyverse` >= 1.3.0
-
-`readxl` >= 1.3.0
+* `tidyverse` >= 1.3.0
+* `readxl` >= 1.3.0
+* Please set your RStudio -> Preferences -> General to never restore or save the workspace (.RData)
+  + ![](RData.png){width=30%}
 
 <br>
 
