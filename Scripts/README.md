@@ -24,7 +24,7 @@ Open the dataset in excel:
 
 
 **Worksheet: lake**
-* Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables are in the expected units. Check every mismatch and correct where needed. 
+* Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables (26) are in the expected units and that all read in. Check every mismatch and correct where needed. 
 * Lake location:
   + Convert the latitude and longitude to decimal degrees, if needed
   + Confirm the corrdinates match to a water body using statlite imagry
@@ -35,7 +35,7 @@ Open the dataset in excel:
 
 
 **Worksheet: stationid**
-* Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables are in the expected units. Check every mismatch and correct where needed. 
+* Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables (11) are in the expected units and that all read in. Check every mismatch and correct where needed. 
 * check that the waterbody_name matches the waterbody_name in the `lake` worksheet
 * Site locations:
   + Convert the latitude and longitude to decimal degrees, if needed
@@ -47,18 +47,19 @@ Open the dataset in excel:
 
 
 **Worksheet: water_parameters**
-* Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables are in the expected units. Check every mismatch and correct where needed. 
+* Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables (29) are in the expected units and that all read in. Check every mismatch and correct where needed. 
 * check that the waterbody_name matches the waterbody_name in the `lake` worksheet
 * check that the stationids match the stationids in the `stationid` worksheet
 * surf_or_int
 
 **Worksheet: taxa_list**
+* Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables (6) are in the expected units and that all read in. Check every mismatch and correct where needed.
 
 <br>
 
 
 **Worksheet: zooplankton**
-* Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables are in the expected units. Check every mismatch and correct where needed. 
+* Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables (19) are in the expected units and that all read in. Check every mismatch and correct where needed. 
 * check that the waterbody_name matches the waterbody_name in the `lake` worksheet
 * check that the stationids match the stationids in the `stationid` worksheet
 * check that the taxa_name matches the taxa_name in the `taxa_list` worksheet
@@ -70,7 +71,7 @@ Open the dataset in excel:
 
 
 **Worksheet: zoop_length**
-* Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables are in the expected units. Check every mismatch and correct where needed. 
+* Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables (12) are in the expected units and that all read in. Check every mismatch and correct where needed. 
 * check that the waterbody_name matches the waterbody_name in the `lake` worksheet
 * check that the stationids match the stationids in the `stationid` worksheet
 
@@ -78,22 +79,28 @@ Open the dataset in excel:
 
 
 **Worksheet: lake_timeline**
+* Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables (3) are in the expected units and that all read in. Check every mismatch and correct where needed.
 * check that the waterbody_name matches the waterbody_name in the `lake` worksheet
 
 <br>
 
 **Worksheet: equiptment**
 
+* Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables (17) are in the expected units and that all read in. Check every mismatch and correct where needed.
+
 <br>
 
 **Worksheet: additional data**
+
+* Use the [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables (8) are in the expected units and that all read in. Check every mismatch and correct where needed.
 
 <br>
 
 ## Suggestions for qc checks
 
-Checking distributions of values; 1:1 plots for interannual variation
-Checking for completeness (e.g. sites listed in `water_parameters` are also in `stationid`)
+* Checking distributions of values; 
+* 1:1 plots for interannual variation
+
 
 <br>
 
