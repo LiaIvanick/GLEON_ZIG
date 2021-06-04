@@ -79,7 +79,7 @@ The [README](scripts/README.md) in the scripts folder includes a checklist for d
 * `readxl` >= 1.3.0
 * Please set your RStudio -> Preferences -> General to never restore or save the workspace (.RData)
 
-![](RData.png){width = 25%}
+![](RData.png | width= 100}
 
 <br>
 
