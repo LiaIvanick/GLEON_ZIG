@@ -17,13 +17,12 @@ Please use Github [Issues](https://github.com/sfigary/GLEON_ZIG/issues) or feel 
 * [Repo structure](#repo-structure)
 * [Proposed workflow](#proposed-workflow)
 * [Suggested packages, versions, and R practices](#suggested-packages-versions-and-R-practices)
-* [Example workflow](#example-workflow)
 * [Github resources](#github-resources)
 * [Thank you!](#thank-you)
 
 <br>
 
-## Data policy
+## [Data Policy](https://docs.google.com/document/d/1v-Wg50qSCBuFWXFg-B3PdfiEKz__8iJr3IeyCUpfKgU/edit?usp=sharing)
 
 ZIG's data sharing policy is that data will not be shared without permission from the data provider. Please do not share any data that you are given access to as a member of the Data Harmonization Team. Please see our [Authorship Guidelines and Data Policy](https://docs.google.com/document/d/1v-Wg50qSCBuFWXFg-B3PdfiEKz__8iJr3IeyCUpfKgU/edit?usp=sharing) for more details.
 
@@ -31,19 +30,19 @@ ZIG's data sharing policy is that data will not be shared without permission fro
 
 ## Repo structure
 
-This repo is organized with three main folders and several subfolder. Each main folder includes a README with more details on structure of the subfolders and file naming conventions. 
+This repo is organized with three main folders and several subfolders. Each folder includes a README with more details about the subfolders and file naming conventions. 
 
-Note: If you clone this repo to your computer you will have access to all of the files in the repo. Please **only** edit your own script and **do not** change the folder structure of this repo.
+Note: If you clone this repo to your computer you will have access to all of the files in this repo. **Please only edit your own script and do not change the folder structure of this repo.**
 
 <br>
 
 ### Folder: [Data](https://github.com/sfigary/GLEON_ZIG/tree/main/data)
 
-The data folder has several subfolders:
+The data folder has two subfolders:
 
-* Inputs: **Do not edit!** This folder includes the original data files from the data providers. Michael or Steph will assign datasets to each member of the Date Team that can be found in this folder.
+* Inputs: **Do not edit!** This folder includes the original data files from data providers. Michael or Steph will assign datasets to  members of the Date Team.
   
-* Derived: Each member of the team will have a subfolder in this folder that their R scripts should write cleaned .csv's to. Please see the scripts folder's [README](scripts/README.md) for file naming conventions.
+* Derived: Each member of the team will have a subfolder here and all data cleaning scripts should write cleaned .csv's to the appropriate subfolder in this folder. Please see the scripts folder's [README](scripts/README.md) for more information and file naming conventions.
 
 <br>
 
@@ -55,7 +54,7 @@ This folder includes all of the scripts that are used to clean each dataset and 
 
 ### Folder: [Figures](https://github.com/sfigary/GLEON_ZIG/tree/main/figures)
 
-This folder will include all of the figures used in the qc checks, including histograms, scatterplots, and others. Data cleaning scripts should write figures to this folder. See the [README](scripts/README.md) in this scripts folder for suggested qa/qc methods and in the [README](figures/README.md) in the figures folder.
+This folder will include all of the figures used in the qc checks, including histograms, scatterplots, and others. Data cleaning scripts should write figures to this folder. See the README in the [figures folder](figures/README.md) and the [scripts folder](scripts/README.md) for more information and suggested qc checks.
 
 <br>
 
@@ -63,13 +62,9 @@ This folder will include all of the figures used in the qc checks, including his
 
 Michael and Steph will use Github [Issues](https://github.com/sfigary/GLEON_ZIG/issues) to assign datasets to team members. The datasets will be located in the [data/inputs](https://github.com/sfigary/GLEON_ZIG/tree/main/data/inputs). To ensure each dataset is looked over with a new pair of eyes, no one will work on their own dataset. Scripts for data cleaning and qc checks will be kept in the scripts folder and will write output to the [data/derived](https://github.com/sfigary/GLEON_ZIG/tree/main/data/derived) (.csv) and [figures](https://github.com/sfigary/GLEON_ZIG/tree/main/figures) (qc checks) folders. 
 
-We will use Github [Issues](https://github.com/sfigary/GLEON_ZIG/issues) for project management, troubleshooting, team communications, and tracking progress. There are many benefits to using Issues, including maintaining a record of data cleaning decisions in a location that everyone in the Data Team can see and comment on. If you are interested in learning more about Github [Issues](https://github.com/sfigary/GLEON_ZIG/issues), please see Chapter 10 in [GitHub for Project Management by Openscapes.](https://openscapes.github.io/series/github-issues.html)
+We will use Github [Issues](https://github.com/sfigary/GLEON_ZIG/issues) for project management, troubleshooting, team communications, and tracking progress. There are many benefits to using Issues, including maintaining a record of data cleaning decisions in one location that everyone in the Data Team can see and comment on. If you are interested in learning more about Github [Issues](https://github.com/sfigary/GLEON_ZIG/issues), please see Chapter 10 in [GitHub for Project Management by Openscapes.](https://openscapes.github.io/series/github-issues.html)
 
-<br>
-
-## Example workflow
-
-The [README](scripts/README.md) in the scripts folder includes a checklist for data cleaning and qc checks. Additionally, the scripts folder includes a well-commented example R script (TO FILL IN) for cleaning a dataset. 
+The [README](scripts/README.md) in the scripts folder includes a checklist for data cleaning and qc checks. Additionally, the scripts folder includes a well-commented R script (TO FILL IN) as an example of how to clean a dataset. 
 
 <br>
 
@@ -77,24 +72,24 @@ The [README](scripts/README.md) in the scripts folder includes a checklist for d
 
 * `tidyverse` >= 1.3.0
 * `readxl` >= 1.3.0
-* Please set your RStudio -> Preferences -> General to never restore or save the workspace (.RData)
+* Please set your RStudio -> Preferences -> General to "never restore or save the workspace (.RData)" 
 
-<img src="RData.png" width="30%" height="30%">
+<img src="RData.png" width="35%" height="35%">
 
 
 <br>
 
 ## Github resources
 
-We are using Github for version control and communication/troubleshooting through Issues. If you're new to Github, here are some resources to get you started:
+We are using Github for version control and communication/troubleshooting through Issues. If you're new to Github, here are some resources tohelp get you started:
 
 * [Git in R:](https://nt246.github.io/NTRES-6100-data-science/lesson2-rmarkdown-github.html) Lecture notes from Dr. Nina Overgaard Therkildsen's Collaborative and Reproducible Data Science in R course at Cornell University. Lessons 2-5 provide step-by-step instructions for setting up and pairing Github with Rstudio. These links are shared with permission from Dr. Nina Overgaard Therkildsen.
 * [GLEON GitHub workshop](https://www.youtube.com/watch?v=B-FHx4l1BNU)
-* [Jenny Bryan’s Happy Git with R:](https://happygitwithr.com/big-picture.html) Chapter 1 is a great introduction to Git and its benefits.
+* [Jenny Bryan’s Happy Git with R:](https://happygitwithr.com/big-picture.html) Chapter 1 introduces Git and its benefits.
 * [GitHub for Project Management by Openscapes:](https://openscapes.github.io/series/github-issues.html) Chapter 10 includes an overview of Git Issues.
 
 <br>
 
 ## Thank you!
 
-Thank you all for volunteering your time and effort to moving ZIG forward by joining this team!
+Thank you all for volunteering your time to keep ZIG moving forward by joining the Data Harmonization Team! This is a vital step for both producing a data paper and getting to the next step of data analysis.

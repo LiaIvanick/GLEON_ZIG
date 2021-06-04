@@ -1,6 +1,6 @@
 # Data
 
-This folder contains the  [originial](https://github.com/sfigary/GLEON_ZIG/tree/main/data/inputs) and  [cleaned](https://github.com/sfigary/GLEON_ZIG/tree/main/data/derived) data. Data team member's scripts should write the derived data directly to the derived folder. See the scripts [README](scripts/README.md) for more information on naming conventions and how to clean the data.
+This folder contains the  [originial](https://github.com/sfigary/GLEON_ZIG/tree/main/data/inputs) and  [cleaned](https://github.com/sfigary/GLEON_ZIG/tree/main/data/derived) data. 
 
 ## Folder: Inputs
 
@@ -8,6 +8,6 @@ This folder includes all of the original data that was submitted by the data pro
 
 ## Folder: Derived
 
-This folder includes all of the output from data cleaning scripts. Each member of the data team has a subfolder that their data cleaning script should write to.
+This folder includes all of the output from data cleaning scripts. Data team member's scripts should write the derived data directly to their derived subfolder (by last name). See the scripts [README](scripts/README.md) for more information on naming conventions and how to clean the data.
 
 *Include notes on data here?*
