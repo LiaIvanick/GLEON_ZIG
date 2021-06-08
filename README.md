@@ -32,7 +32,7 @@ ZIG's data sharing policy is that data will not be shared without permission fro
 
 This repo is organized with three main folders and several subfolders. Each folder includes a README with more details about the subfolders and file naming conventions. 
 
-Note: If you clone this repo to your computer you will have access to all of the files in this repo. **Please only edit your own script and do not change the folder structure of this repo.**
+Note: If you clone this repo to your computer you will have access to all of the files. **Please only edit your own script and do not change the folder structure of this repo.**
 
 <br>
 
@@ -81,10 +81,10 @@ The [README](scripts/README.md) in the scripts folder includes a checklist for d
 
 ## Github resources
 
-We are using Github for version control and communication/troubleshooting through Issues. If you're new to Github, here are some resources tohelp get you started:
+We are using Github for version control and communication/troubleshooting through Issues. If you're new to Github, here are some resources to help get you started:
 
-* [Git in R:](https://nt246.github.io/NTRES-6100-data-science/lesson2-rmarkdown-github.html) Lecture notes from Dr. Nina Overgaard Therkildsen's Collaborative and Reproducible Data Science in R course at Cornell University. Lessons 2-5 provide step-by-step instructions for setting up and pairing Github with Rstudio. These links are shared with permission from Dr. Nina Overgaard Therkildsen.
-* [GLEON GitHub workshop](https://www.youtube.com/watch?v=B-FHx4l1BNU)
+* [Git in R:](https://nt246.github.io/NTRES-6100-data-science/lesson2-rmarkdown-github.html) Lecture notes from Dr. Nina Overgaard Therkildsen's Collaborative and Reproducible Data Science in R course at Cornell University. Lessons 2-5 provide step-by-step instructions for setting up Github and pairing it with Rstudio. These links are shared with permission from Dr. Nina Overgaard Therkildsen.
+* [GLEON's GitHub workshop](https://www.youtube.com/watch?v=B-FHx4l1BNU) by Joe Stachelek
 * [Jenny Bryan’s Happy Git with R:](https://happygitwithr.com/big-picture.html) Chapter 1 introduces Git and its benefits.
 * [GitHub for Project Management by Openscapes:](https://openscapes.github.io/series/github-issues.html) Chapter 10 includes an overview of Git Issues.
 
