@@ -15,6 +15,7 @@
 
 library(tidyverse)
 library(readxl)
+library(data.table)
 
 # First create directory for derived data products
 
@@ -372,14 +373,9 @@ lake_station_water <- inner_join(x = lake_station,
 anti_join(x = lake_station, y = water_parameters, by = c("waterbody_name", "stationid"))
 
 lake_station_water_zoop <- inner_join(x = lake_station_water, 
-                                      y = zoop_abundance %>%
-                                        mutate(day_of_month_dd = ifelse(year_yyyy == 2002 & month_mm == 7 & day_of_month_dd == 15,
-                                                                        yes = 16, no = day_of_month_dd),
-                                               day_of_month_dd = ifelse(year_yyyy == 2003 & month_mm == 8 & day_of_month_dd == 21,
-                                                                        yes = 27, no = day_of_month_dd)), 
-                                      by = c("waterbody_name", "stationid", "year_yyyy",
-                                             "month_mm"), 
-                                      suffix = c("water", "zoop"))
+                                      y = zoop_abundance, 
+                                      by = c("waterbody_name", "stationid"), 
+                                      suffix = c("_water", "_zoop"))
 
 anti_join(x = lake_station_water, 
            y = zoop_abundance %>%
@@ -392,17 +388,12 @@ anti_join(x = lake_station_water,
   distinct(waterbody_name, stationid, year_yyyy,
            month_mm, day_of_month_dd, time_hhmm)
 
-anti_join(x = zoop_abundance%>%
-            mutate(day_of_month_dd = ifelse(year_yyyy == 2002 & month_mm == 7 & day_of_month_dd == 15,
-                                            yes = 16, no = day_of_month_dd),
-                   day_of_month_dd = ifelse(year_yyyy == 2003 & month_mm == 8 & day_of_month_dd == 21,
-                                            yes = 27, no = day_of_month_dd)), 
+anti_join(x = zoop_abundance, 
           y = lake_station_water, 
           by = c("waterbody_name", "stationid", "year_yyyy",
                  "month_mm", "day_of_month_dd", "time_hhmm")) %>%
   distinct(waterbody_name, stationid, year_yyyy,
              month_mm, day_of_month_dd, time_hhmm)
 
-write.csv(x = lake_station_water_zoop, 
-          file = "../data/derived_products/obertegger_disaggregated/complete_lake_station_water_zoop.csv", 
-          row.names = TRUE)
+fwrite(x = lake_station_water_zoop, 
+       file = "../data/derived_products/obertegger_disaggregated/complete_lake_station_water_zoop.csv")
