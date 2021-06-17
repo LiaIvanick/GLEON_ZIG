@@ -42,7 +42,7 @@ The data folder has two subfolders:
 
 * Inputs: **Do not edit!** This folder includes the original data files from data providers. Michael or Steph will assign datasets to  members of the Date Team.
   
-* Derived: Each member of the team will have a subfolder here and all data cleaning scripts should write cleaned .csv's to the appropriate subfolder in this folder. Please see the scripts folder's [README](scripts/README.md) for more information and file naming conventions.
+* derived_products: Each dataset will have a subfolder here and all data cleaning scripts should write cleaned .csv's to the appropriate subfolder in this folder. Please see the scripts folder's [README](scripts/README.md) for more information and file naming conventions.
 
 <br>
 
@@ -54,7 +54,7 @@ This folder includes all of the scripts that are used to clean each dataset and 
 
 ### Folder: [Figures](https://github.com/sfigary/GLEON_ZIG/tree/main/figures)
 
-This folder will include all of the figures used in the qc checks, including histograms, scatterplots, and others. Data cleaning scripts should write figures to this folder. See the README in the [figures folder](figures/README.md) and the [scripts folder](scripts/README.md) for more information and suggested qc checks.
+This folder will include all of the figures used in the qc checks, including histograms, scatterplots, and others. Each dataset will have a subfolder in this folder and the data cleaning scripts should write figures here. See the README in the [figures folder](figures/README.md) and the [scripts folder](scripts/README.md) for more information and suggested qc checks.
 
 <br>
 
