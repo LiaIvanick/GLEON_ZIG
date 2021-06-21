@@ -80,8 +80,8 @@ Here's an list of things to check/watch for while cleaning the data. This list i
   
   
 
-* **Check zooplankton units**: Different units were allowed in the zooplankton worksheet for density and biomass. Confirm/convert the units to:
-  + Density: ind_L
+* **Check zooplankton units**: Different units were allowed in the zooplankton worksheet for abundance and biomass. Confirm/convert the units to:
+  + Abundance: ind_L
   + Biomass: µg_m^3 or mg_m^3
   + Also, check that the biomass units and values are logical for wet/dry biomass (column: biomass_dry_wet)
 
