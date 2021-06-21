@@ -22,6 +22,7 @@ This folder contains all of the scripts that will be used to convert the individ
 
 * "00" indicates a script that is used for data cleaning and high level QC checks. Each dataset should have one script associated with it. 
   + Naming convention: "00_dataproviderlastname_data_datateamlastnamefirstname.R" all lowercase. 
+  + FIX: this needs in include lakename, too
   
 * Future: "01" indicates the script that brings all of the cleaned data together into one dataset.
 
@@ -101,7 +102,7 @@ Here's an list of things to check/watch for while cleaning the data. This list i
 
 ## Contacting data providers
 
-Cleaning many, if not all, datasets will lead to questions for the data providers. If you contact a data provider (email's are in the lake worksheet), please cc the ZIG co-leads on the email. Additionally, please note in your script when changes are made at the direction of the data provider.
+Cleaning many, if not all, datasets will lead to questions for the data providers. If you contact a data provider (email's are in the lake worksheet), please cc the ZIG co-leads on the email and feel free to use this [template](https://docs.google.com/document/d/1BUZAzFWY_lv6jz-ZLHaANd9EcIX-Z4n25Q2K0vWmw9s/edit?usp=sharing). Additionally, please note in your script when changes are made at the direction of the data provider.
 
 <br>
 
