@@ -15,7 +15,6 @@
 
 library(tidyverse)
 library(readxl)
-library(data.table)
 
 # First create directory for derived data products
 
