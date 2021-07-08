@@ -81,4 +81,4 @@ We are using Github for version control and communication/troubleshooting throug
 
 Thank you all for volunteering your time to keep ZIG moving forward by joining the Data Harmonization Team! This is a vital step for both producing a data paper and getting to the next step of data analysis.
 
-Updated: 1July2021
+Updated: 7July2021

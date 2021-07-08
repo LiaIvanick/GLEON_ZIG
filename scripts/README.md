@@ -1,5 +1,5 @@
 Date Created: 2021 June 21 <br>
-Date Updated: 2021 July 01
+Date Updated: 2021 July 07
 
 # To the Reader:
 
@@ -9,29 +9,38 @@ For each dataset we are looking for:
 
 1. Script for cleaning the dataset
 	+ saved in scripts folder
-	+ script naming convention: `00aa_<DataProviderLastName>_<LakeName>_<DataCleanerLastName>.R` More deatils on this below.
+	+ script naming convention: `00aa_<DataProviderLastName>_<LakeName>_<DataCleanerLastName>.R` More details on this below.
 
 2. cleaned csv's
+ 	+ one .csv for each worksheet (nine total) 
+ 	+ .csv naming convention: `<LakeName>_<WorksheetName>.csv`
 	+ write to data/derived_products/dataset folder
-	+ dataset folder naming convention: `data/derived_products/LakeName_DataTeamLastName_disaggregated`
+	+ dataset folder naming convention: `data/derived_products/<LakeName>_<DataTeamLastName>_disaggregated`
+
 3. QC figures
 	+ write to figures/dataset folder
-	+ dataset folder naming convention: `figures/LakeName_DataTeamLastName_qc`
+	+ dataset folder naming convention: `figures/<LakeName>_<DataTeamLastName>_qc`
+	
 4. A well-documented `README` describing the data-cleaning process 
 	+ saved in data/derived_products folder
 
-This document provides more information on each of these requirements. Please see `EXAMPLE SCRIPT NAME` as an example of this process and the associated `README` in the `NAME OF FOLDER`.
+This document provides more information on each of these requirements. 
 
 As always, please feel free to reach out to Michael or Steph with any questions via email or Github Issues.
 
 ## Table of contents
+* [Example scripts](#example-scripts)
 * [Directory structures for scripts](#directory-structures-for-scripts)
 * [General notes on scripts and assessing quality control](#general-notes-on-scripts-and-assessing-quality-control)
 * [Data cleaning suggestions](#data-cleaning-suggestions)
 * [Contacting data providers](#contacting-data-providers)
 * [Creating READMEs](#creating-readmes)
-* [Formatting your scripts](#formatting-your-scripts)
 
+## Example scripts
+
+Both Michael and Steph wrote example scripts that you can use to get started. Michael's script provides great examples of creating qc figures, cleaning the data, and a README (`00a_oberteggger_data_meyermichael.R`). Steph's script is focused on cleaning the data (`00a_obertegger_data_figary.R`) and provides functions for checking the number of variables for each worksheet and if the read-in variables match the expected variable type (`functions_ZIG_data_team.R`). 
+
+NOTE: These scripts are certainly incomplete and may deviate from what we have listed as suggestions, requirements, or naming conventions in this document. Please follow the guidelines in this document, not the scripts!
 
 ## Directory structures for scripts
 - Be sure that you have modified the derived products output directory as well as the QC figures directory. This should be in the first section of the script.
@@ -43,7 +52,7 @@ As always, please feel free to reach out to Michael or Steph with any questions 
 
 ## General notes on scripts and assessing quality control
 - **Very Important:** Please remember that we are operating under the "stay in your lane doctrine". This means that each member of the team will have their own piece that they are working on, and no one else should touch someone else's script. This will help prevent merge conflicts in the long run. To do this efficiently, everyone will need to make their own R script (1 R script per dataset). It should follow the nomenclature: `00aa_<DataProviderLastName>_<LakeName>_<DataCleanerLastName>.R` -- example `00a_currie_ontario_meyer.R`. The `00` refers to this script as being labeled a "cleaning script". The letters following `00` refer to the unique identifier this script has. These identifiers will be very important when we submit the full workflow, and they help our data harmonization routine retain a consistent structure.
-- The companion R script (which you will adapt/create based on MFM and SEF's scripts `NAME HERE`) is meant to largely capture high-level issues and signal where low-level issues may occur. A high level issue would be something like one year/month of data having abnormally high values (potentially indicative of lessened data quality). While there is nothing we can do about the data's quality assurance, this scripted routine assures that the original data integrity and quality are maintained throughout are aggregation procedure.
+- The companion R script (which you will adapt/create based on MFM and SEF's example scripts) is meant to largely capture high-level issues and signal where low-level issues may occur. A high level issue would be something like one year/month of data having abnormally high values (potentially indicative of lessened data quality). While there is nothing we can do about the data's quality assurance, this scripted routine assures that the original data integrity and quality are maintained throughout are aggregation procedure.
 - In an ideal case, you would manually check plots and in the event of unexpected values pattern - you can manually investigate those data and document abnormalities. This process will also help expedite analysis down the road, as those performing the analysis may have questions about data integrity arise as they begin to work with the dataset.
 - There may be instances where you are able to work more inefficiently by manually inspecting certain dates and timepoints within R. That is 100% okay, but that checking should be documented in your companion README document. MFM created a template for what this document could/should look like within the `derived_products/obertegger_disaggregated` directory. While you are welcome to change the format, each README document should contain the same information, at the very least.
 
@@ -51,7 +60,13 @@ As always, please feel free to reach out to Michael or Steph with any questions 
 ## Data cleaning suggestions
 * **Required- replace tow column:** In the zooplankton worksheet use `sample_depth_m` to create two new columns `top_tow_m` and `bottom_tow_m`. Assume top of tow is 0 unless stated otherwise. Remove the `sample_depth_m` column.
 
-* **Read the data provider notes** in `lake/lake_comments`, `stationid/sid_comments`, `water_parameters/surf_or_int`. These may include useful information for the data cleaning process. If you find comments in other areas of the data that need to be removed for varible consistency, please add (`paste()`) them to the lake/lake_comments.
+
+* **Check zooplankton units**: Different units were allowed in the `zooplankton` worksheet for abundance and biomass. Confirm or convert the units to:
+  + Abundance: ind_L
+  + Biomass: µg_m^3 or mg_m^3
+  + Also, check that the biomass units and values are logical for wet or dry biomass (column: `biomass_dry_wet`)
+
+* **Read the data provider notes** in `lake/lake_comments`, `stationid/sid_comments`, `water_parameters/surf_or_int`. These may include useful information for the data cleaning process. If you find comments in other areas of the data that need to be removed for variable consistency, please add (`paste()`) them to the lake/lake_comments.
 
 * **Check variable types/number** for each worksheet using [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables are in the expected units and that each worksheet includes the expected number of variables.
 
@@ -73,16 +88,14 @@ As always, please feel free to reach out to Michael or Steph with any questions 
   + `zoop_sampler_type` is defined in the `zooplankton` worksheet  and is also found in `zoop_length`.
   
 
-* **Check zooplankton units**: Different units were allowed in the `zooplankton` worksheet for abundance and biomass. Confirm or convert the units to:
-  + Abundance: ind_L
-  + Biomass: µg_m^3 or mg_m^3
-  + Also, check that the biomass units and values are logical for wet or dry biomass (column: `biomass_dry_wet`)
 
 * **Check for zeros** in the water parameters sheet. In most cases there should not be zero values, and instead half of the detection limit should be listed instead.
 
 * **Methods**: Confirm that all of the parameters in `water_parameters` also include method data in the equipment worksheet. Note: DO methods were not collected.
 
-* **zooplankton$min_counts** was confusing in the data instructions and has received the most questions. This should be the minimum number of zooplankton that needed to be counted in order to stop subsampling, if subsampling was used. Check this value to see if it makes sense. Most protocals use a `min_count` of 100, 150, 200, or 400.
+* **zooplankton$min_counts** was confusing in the data instructions and has received the most questions. This should be the minimum number of zooplankton that needed to be counted in order to stop subsampling, if subsampling was used. Check this value to see if it makes sense. Most protocols use a `min_count` of 100, 150, 200, or 400.
+
+* **read_excel()**: Because data were submitted as a .xlsx format, you will likely need to use the `read_excel()` function from the `readxl` package in R. All outputs should be in a CSV format though.
 
 
 ## Contacting data providers
@@ -92,7 +105,7 @@ Cleaning many, if not all, datasets will lead to questions for the data provider
 
 ## Creating READMEs
 
-Each cleaned dataset needs a `README` associated with it that explains the data cleaning process. An example of this can be found in `data/derived_products/obertegger_disaggregated` (FIX NAME). At a minimum the `README` should include: 
+Each cleaned dataset needs a `README` associated with it that explains the data cleaning process. An example of this can be found in `data/derived_products/obertegger_disaggregated`. At a minimum the `README` should include: 
 
 * Your name and contact information
 * List of input and outputs
@@ -102,21 +115,6 @@ Each cleaned dataset needs a `README` associated with it that explains the data 
 
 
 
-## Formatting your scripts (TO EDIT AFTER MERGE)
 
-The script can be divided into the following sections:
-
-1. Lake information
-2. Station information
-3. Water Parameters
-4. Taxa List
-5. Zooplankton Abundance
-6. Zooplankton Length
-7. Joins tables
-8. Other tables (??)
-
-Because data were submitted as a .xlsx format, you will likely need to use the `read_excel()` function from the `readxl` package in R. All outputs should be in a CSV format though.
-
-A quick trick to see if something is strange in your data -- when you are reading in data, `read_excel()` assign any mixed column type (e.g., numbers, special characters, letters) as a "character" type. If the expected column should be a numeric type, this can help you flag columns that will need attention. The most likely culprit may be NAs entered as strings into the submitted data or the < sign being inserted as a value being below a minimal detection limit. 
 
 ## 
