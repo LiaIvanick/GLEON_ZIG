@@ -22,7 +22,7 @@ library(janitor)
 
 # First create directory for derived data products
 
-derived_product_sub_dir <- "obertegger_disaggregated"
+derived_product_sub_dir <- "obertegger_tovel_disaggregated"
 derived_product_output_dir <- file.path("../data/derived_products", derived_product_sub_dir)
 
 if (!dir.exists(derived_product_output_dir)){
@@ -33,7 +33,7 @@ if (!dir.exists(derived_product_output_dir)){
 
 # Second create directory for figures
 
-figure_sub_dir <- "obertegger_qc"
+figure_sub_dir <- "obertegger_tovel_qc"
 figure_output_dir <- file.path("../figures", figure_sub_dir)
 
 if(!dir.exists(figure_output_dir)){
@@ -417,7 +417,8 @@ zooplankton_abundance_clean <- zooplankton_abundance_clean %>%
   pivot_wider(names_from = "measurement", values_from = "value")
 
 write.csv(x = zooplankton_abundance_clean, 
-          file = "../data/derived_products/obertegger_disaggregated/zooplankton_abundance.csv", 
+          file = paste(derived_product_output_dir, "zooplankton_abundance_obertegger.csv", 
+                       sep = "/"),
           row.names = FALSE)
 
 
@@ -440,9 +441,9 @@ zooplankton_length_clean <- zooplankton_length %>%
 check_zlen(zooplankton_length_clean)
 
 write.csv(x = zooplankton_length_clean, 
-          file = "../data/derived_products/obertegger_disaggregated/zooplankton_length.csv", 
+          file = paste(derived_product_output_dir, "zooplankton_length_obertegger.csv", 
+                       sep = "/"),
           row.names = FALSE)
-
 
 # 7. Lake Timeline --------------------------------------------------------
 
@@ -459,8 +460,10 @@ lake_timeline_clean <- lake_timeline %>% #lake_timeline corrections
 
 check_time(lake_timeline_clean)
 
+
 write.csv(x = lake_timeline_clean, 
-          file = "../data/derived_products/obertegger_disaggregated/lake_timeline.csv", 
+          file = paste(derived_product_output_dir, "lake_timeline_obertegger.csv", 
+                       sep = "/"),
           row.names = FALSE)
 
 
@@ -481,7 +484,8 @@ equipment_clean <- equipment[1,]  %>%  #remove extra information
 check_equip(equipment_clean)
 
 write.csv(x = equipment_clean, 
-          file = "../data/derived_products/obertegger_disaggregated/equipment.csv", 
+          file = paste(derived_product_output_dir, "equipment_clean_obertegger.csv", 
+                       sep = "/"),
           row.names = FALSE)
 
 equip_check <- data.frame(mean = water_parameters_clean %>% 
@@ -541,22 +545,26 @@ additional_data_clean <- additional_data %>%
 check_add(additional_data_clean)
 
 write.csv(x = additional_data_clean, 
-          file = "../data/derived_products/obertegger_disaggregated/additional_data.csv", 
+          file = paste(derived_product_output_dir, "additional_data_obertegger.csv", 
+                       sep = "/"),
           row.names = FALSE)
 
 # 10. Joins ----------------------------------------------------------------
 
-# C
+# Clear memory
 rm(list = ls())
 gc()
 
-lake_info <- read.csv("../data/derived_products/obertegger_disaggregated/lake_information_obertegger.csv")
+derived_product_sub_dir <- "obertegger_tovel_disaggregated"
+derived_product_output_dir <- file.path("../data/derived_products", derived_product_sub_dir)
 
-station_info <- read.csv("../data/derived_products/obertegger_disaggregated/station_information_obertegger.csv")
+lake_info <- read.csv("../data/derived_products/obertegger_tovel_disaggregated/lake_information_obertegger.csv")
 
-water_parameters <- read.csv("../data/derived_products/obertegger_disaggregated/water_parameters_obertegger.csv")
+station_info <- read.csv("../data/derived_products/obertegger_tovel_disaggregated/station_information_obertegger.csv")
 
-zoop_abundance <- read.csv("../data/derived_products/obertegger_disaggregated/zooplankton_abundance.csv")
+water_parameters <- read.csv("../data/derived_products/obertegger_tovel_disaggregated/water_parameters_obertegger.csv")
+
+zoop_abundance <- read.csv("../data/derived_products/obertegger_tovel_disaggregated/zooplankton_abundance_obertegger.csv")
 
 lake_station <- inner_join(x = lake_info, 
                            y = station_info, 
@@ -580,10 +588,13 @@ anti_join(x = lake_station,
            by = c("waterbody_name", "stationid"))
 
 write.csv(x = lake_station_water, 
-       file = "../data/derived_products/obertegger_disaggregated/complete_lake_station_water.csv",
-       row.names = FALSE)
+          file = paste(derived_product_output_dir, "complete_lake_station_water_obertegger.csv", 
+                       sep = "/"),
+          row.names = FALSE)
 
 write.csv(x = lake_station_zoop, 
-          file = "../data/derived_products/obertegger_disaggregated/complete_lake_station_zooplankton.csv",
+          file = paste(derived_product_output_dir, "complete_lake_station_zooplankton.csv", 
+                       sep = "/"),
           row.names = FALSE)
+
 
