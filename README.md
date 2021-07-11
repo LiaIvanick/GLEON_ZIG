@@ -6,7 +6,7 @@ Welcome to the ZIG GLEON Data Harmonization Team git repo! The goals of the data
 * Provide scripted workflows for each step of data cleaning
 * Perform high level QC of submitted data
 
-This README includes the data sharing policy, git repo structure, proposed workflow, suggested packages, and more. Please see the scripts folder [README](scripts/README.md) for more information on cleaning and performing QC check on an individual dataset and an example script.
+This README includes the data sharing policy, git repo structure, proposed workflow, suggested packages, and more. Please see the scripts folder [README](scripts/README.md) for more information on cleaning and performing QC check on an individual dataset and an example script. 
 
 Please use Github [Issues](https://github.com/sfigary/GLEON_ZIG/issues) or feel free to reach out to Michael Meyer (michael.f.meyer@wsu.edu), Steph Figary (sef92@cornell.edu) or Warren Currie (warren.currie@dfo-mpo.gc.ca) if you have any questions.  
 
@@ -34,7 +34,7 @@ This repo is organized with three main folders and several subfolders.
 
 
 * Data:
-  + Inputs: **Do not edit!** This folder includes the original data files from data providers. Michael or Steph will assign datasets to  members of the Date Team.
+  + Inputs: **Do not edit!** This folder includes the original data files from data providers. Michael or Steph will assign datasets to  members of the Date Team. Please see the [data submission form](https://docs.google.com/spreadsheets/d/1QrXnV7tFMUeL_8aAWt7KZfKNVz0GH7NGw8LR8UsK-qw/edit?usp=sharing) for information on each dataset you receive. This includes any additional information the data providers wanted the Data Harmonization Team to know. 
   + derived_products: Each dataset will have a subfolder that contains the cleans .csv's and a `README` that describes the data cleaning process and important information. 
 
 * Scripts: This folder includes all of the scripts that are used to clean each dataset and create one final dataset for analysis (later step). 
