@@ -1,5 +1,5 @@
 Date Created: 2021 June 21 <br>
-Date Updated: 2021 July 07
+Date Updated: 2021 July 21
 
 # To the Reader:
 
@@ -13,15 +13,15 @@ For each dataset we are looking for:
 
 2. cleaned csv's
  	+ one .csv for each worksheet (nine total) 
- 	+ .csv naming convention: `<LakeName>_<WorksheetName>.csv`
+ 	+ .csv naming convention: `<WorksheetName>_<DataProviderLastName>.csv`
 	+ write to data/derived_products/dataset folder
-	+ dataset folder naming convention: `data/derived_products/<LakeName>_<DataTeamLastName>_disaggregated`
+	+ dataset folder naming convention: `data/derived_products/<DataProviderLastName>_<LakeName>_disaggregated`
 
 3. QC figures
 	+ write to figures/dataset folder
-	+ dataset folder naming convention: `figures/<LakeName>_<DataTeamLastName>_qc`
+	+ dataset folder naming convention: `figures/<DataProviderLastName>_<LakeName>_qc`
 	
-4. A well-documented `README` describing the data-cleaning process 
+4. A well-documented `README` describing the data-cleaning process. Exmaple [README](data/derived_products/obertegger_tovel_disaggregated/README.md)
 	+ saved in data/derived_products folder
 
 This document provides more information on each of these requirements. 
@@ -38,23 +38,23 @@ As always, please feel free to reach out to Michael or Steph with any questions 
 
 ## Example scripts
 
-Both Michael and Steph wrote example scripts that you can use to get started. Michael's script provides great examples of creating qc figures, cleaning the data, and a README (`00a_oberteggger_data_meyermichael.R`). Steph's script is focused on cleaning the data (`00a_obertegger_data_figary.R`) and provides functions for checking the number of variables for each worksheet and if the read-in variables match the expected variable type (`functions_ZIG_data_team.R`). 
+Michael and Steph wrote an example script and functions that you can use to get started. The script (`00a_oberteggger_tovel_meyer.R`) walks through cleaning the data, creating qc figures and a README and the functions (`functions_ZIG_data_team.R`) can be used to check the number of variables for each worksheet and if the read-in variables match the expected variable type. 
 
-NOTE: These scripts are certainly incomplete and may deviate from what we have listed as suggestions, requirements, or naming conventions in this document. Please follow the guidelines in this document, not the scripts!
+NOTE: Please follow the guidelines in this document, not the script!
 
 ## Directory structures for scripts
 - Be sure that you have modified the derived products output directory as well as the QC figures directory. This should be in the first section of the script.
   - The **data/derived_products** directory should be named `*_disaggregated`, meaning that the data are kept at the original spatial and temporal resolutions, but they have been checking for correct values. These are the data that will be used for the data product as well as the analytical datasets for successive projects. We would like one folder/dataset and all output should be written as .csv. 
   - The **figures/XXXX_qc** directory should be located within the figures directory and contain all figures produced from the associated harmonization script. 
-- Be sure to build all scripts using a relative file path, where the "home" directory is the **scripts** folder. All data are read from the **data/inputs** directory and written to the **data/derived_products** directory. If you are new(er) to relative file paths, it means that there should never be a hardcoded directory within your script (this helps promote future reproducibility without need for machine/user specific file nomenclature). To check if your directories are set up correctly, you should use `getwd()` within your R console. If it is *NOT* set to ~/ZIG/scripts, then you can use the RStudio GUI by clicking `Set Working Directory > Source to File Location` and your directory *should* be properly set.
+- Be sure to build all scripts using a relative file path, where the "home" directory is the **scripts** folder. All data are read from the **data/inputs** directory and written to the **data/derived_products** directory. If you are new(er) to relative file paths, it means that there should never be a hardcoded directory within your script (this helps promote future reproducibility without need for machine/user specific file nomenclature). To check if your directories are set up correctly, you should use `getwd()` within your R console. If it is *NOT* set to ~/GLEON_ZIG/scripts, then you can use the RStudio GUI by clicking `Set Working Directory > Source to File Location` and your directory *should* be properly set.
 
 
 
 ## General notes on scripts and assessing quality control
 - **Very Important:** Please remember that we are operating under the "stay in your lane doctrine". This means that each member of the team will have their own piece that they are working on, and no one else should touch someone else's script. This will help prevent merge conflicts in the long run. To do this efficiently, everyone will need to make their own R script (1 R script per dataset). It should follow the nomenclature: `00aa_<DataProviderLastName>_<LakeName>_<DataCleanerLastName>.R` -- example `00a_currie_ontario_meyer.R`. The `00` refers to this script as being labeled a "cleaning script". The letters following `00` refer to the unique identifier this script has. These identifiers will be very important when we submit the full workflow, and they help our data harmonization routine retain a consistent structure.
-- The companion R script (which you will adapt/create based on MFM and SEF's example scripts) is meant to largely capture high-level issues and signal where low-level issues may occur. A high level issue would be something like one year/month of data having abnormally high values (potentially indicative of lessened data quality). While there is nothing we can do about the data's quality assurance, this scripted routine assures that the original data integrity and quality are maintained throughout are aggregation procedure.
+- The companion R script (which you will adapt/create based on MFM and SEF's example script: `00a_oberteggger_tovel_meyer.R`) is meant to largely capture high-level issues and signal where low-level issues may occur. A high level issue would be something like one year/month of data having abnormally high values (potentially indicative of lessened data quality). While there is nothing we can do about the data's quality assurance, this scripted routine assures that the original data integrity and quality are maintained throughout are aggregation procedure.
 - In an ideal case, you would manually check plots and in the event of unexpected values pattern - you can manually investigate those data and document abnormalities. This process will also help expedite analysis down the road, as those performing the analysis may have questions about data integrity arise as they begin to work with the dataset.
-- There may be instances where you are able to work more inefficiently by manually inspecting certain dates and timepoints within R. That is 100% okay, but that checking should be documented in your companion README document. MFM created a template for what this document could/should look like within the `derived_products/obertegger_disaggregated` directory. While you are welcome to change the format, each README document should contain the same information, at the very least.
+- There may be instances where you are able to work more inefficiently by manually inspecting certain dates and timepoints within R. That is 100% okay, but that checking should be documented in your companion README document. MFM created a template for what this document could/should look like within the `derived_products/obertegger_tovel_disaggregated` directory. While you are welcome to change the format, each README document should contain the same information, at the very least.
 
 
 ## Data cleaning suggestions
@@ -66,7 +66,7 @@ NOTE: These scripts are certainly incomplete and may deviate from what we have l
   + Biomass: µg_m^3 or mg_m^3
   + Also, check that the biomass units and values are logical for wet or dry biomass (column: `biomass_dry_wet`)
 
-* **Read the data provider notes** in `lake/lake_comments`, `stationid/sid_comments`, `water_parameters/surf_or_int`. These may include useful information for the data cleaning process. If you find comments in other areas of the data that need to be removed for variable consistency, please add (`paste()`) them to the lake/lake_comments.
+* **Read the data provider notes** in `lake/lake_comments`, `stationid/sid_comments`, `water_parameters/surf_or_int`. These may include useful information for the data cleaning process. If you find comments in other areas of the data that need to be removed for variable consistency, please add (`paste()`) them to the lake/lake_comments.  Also, please see the [data submission form](https://docs.google.com/spreadsheets/d/1QrXnV7tFMUeL_8aAWt7KZfKNVz0GH7NGw8LR8UsK-qw/edit?usp=sharing) for information on each dataset you receive. This includes any additional information the data providers wanted the Data Harmonization Team to know.
 
 * **Check variable types/number** for each worksheet using [ZIG data instructions](https://drive.google.com/file/d/1FhcNSKs0Xd4fJ2NH4V4TzQP1KB_zjhUV/view?usp=sharing) to see if all of the variables are in the expected units and that each worksheet includes the expected number of variables.
 
@@ -105,15 +105,13 @@ Cleaning many, if not all, datasets will lead to questions for the data provider
 
 ## Creating READMEs
 
-Each cleaned dataset needs a `README` associated with it that explains the data cleaning process. An example of this can be found in `data/derived_products/obertegger_disaggregated`. At a minimum the `README` should include: 
+Each cleaned dataset needs a `README` associated with it that explains the data cleaning process. An example of this can be found in `data/derived_products/obertegger_tovel_disaggregated`. At a minimum the `README` should include: 
 
 * Your name and contact information
 * List of input and outputs
 * Directory tree
 * Session info and R packages
 * Notes from the data cleaning process
-
-
 
 
 

@@ -15,7 +15,7 @@ Please use Github [Issues](https://github.com/sfigary/GLEON_ZIG/issues) or feel 
 ## Table of contents
 * [Data policy](#data-policy)
 * [Repo structure](#repo-structure)
-* [Proposed workflow](#proposed-workflow)
+* [Proposed workflow/Github issues](#proposed-workflow-github-issues)
 * [Suggested packages, versions, and R practices](#suggested-packages-versions-and-R-practices)
 * [Github resources](#github-resources)
 * [Thank you!](#thank-you)
@@ -79,6 +79,6 @@ We are using Github for version control and communication/troubleshooting throug
 
 ## Thank you!
 
-Thank you all for volunteering your time to keep ZIG moving forward by joining the Data Harmonization Team! This is a vital step for both producing a data paper and getting to the next step of data analysis.
+Thank you all for volunteering your time to keep ZIG moving forward by joining the Data Harmonization Team! This is a vital step for both producing the data paper and getting to the next step of data analysis.
 
-Updated: 7July2021
+Updated: 21July2021
